@@ -1,0 +1,18 @@
+Package: downsample
+Type: Package
+Title: Downsample count data
+Version: 0.99.0
+Authors@R: c(
+	person('Scott', 'Tyler', NULL, 'scottyler89@gmail.com', c('cre', 'aut'), comment=c(ORCID = "0000-0002-7683-6686")),
+	person('Supinda', 'Bunyavanich', NULL, 'supinda.bunyavanich@mssm.edu', c('aut')),
+    person('Eric', 'Schadt', NULL, 'eric.schadt@mssm.edu', c('aut')))
+Description: This tool will downsample (staying true to Poisson sampling biases) each column of the input matrix such that all colSums are equal.
+Suggests: knitr
+License: GPL-3
+Encoding: UTF-8
+VignetteBuilder: knitr
+LazyData: true
+RoxygenNote: 7.1.1
+biocViews: CellBiology, CellBasedAssays, BatchEffect, Software
+Collate: 
+    'downsample.R'
