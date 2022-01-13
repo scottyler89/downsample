@@ -7,6 +7,7 @@ Authors@R: c(
 	person('Supinda', 'Bunyavanich', NULL, 'supinda.bunyavanich@mssm.edu', c('aut')),
     person('Eric', 'Schadt', NULL, 'eric.schadt@mssm.edu', c('aut')))
 Description: This tool will downsample (staying true to Poisson sampling biases) each column of the input matrix such that all colSums are equal.
+Imports: parallel
 Suggests: knitr
 License: GPL-3
 Encoding: UTF-8
