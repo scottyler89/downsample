@@ -1,7 +1,7 @@
 Package: downsample
 Type: Package
 Title: Downsample count data
-Version: 0.99.0
+Version: 0.99.1
 Authors@R: c(
 	person('Scott', 'Tyler', NULL, 'scottyler89@gmail.com', c('cre', 'aut'), comment=c(ORCID = "0000-0002-7683-6686")),
 	person('Supinda', 'Bunyavanich', NULL, 'supinda.bunyavanich@mssm.edu', c('aut')),

@@ -41,7 +41,7 @@ get_sim_transcripts<-function(in_col_vect, target_depth){
 #' @examples
 #'    in_mat<-matrix(rnbinom(1000*20000,.1,c(0.5,0.5,0.5)),ncol=1000,nrow=20000)
 #'    out_mat<-downsample_mat(in_mat)
-#' @importFrom parallel detectCores makeCluster parApply stopCluster
+#' @importFrom parallel detectCores makeCluster parApply stopCluster clusterExport
 #' @name downsample_mat
 #' @export
 downsample_mat<-function(in_mat, target_depth=NULL, rm_less=TRUE, parallel=TRUE, cores=NULL, quiet=FALSE){

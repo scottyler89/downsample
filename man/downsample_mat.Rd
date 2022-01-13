@@ -2,16 +2,37 @@
 % Please edit documentation in R/downsample.R
 \name{downsample_mat}
 \alias{downsample_mat}
+\alias{min_count_norm_mat}
 \title{Downsample columns of a matrix}
 \usage{
-downsample_mat(in_mat, target_depth = NULL)
+downsample_mat(
+  in_mat,
+  target_depth = NULL,
+  rm_less = TRUE,
+  parallel = TRUE,
+  cores = NULL,
+  quiet = FALSE
+)
+
+min_count_norm_mat(
+  in_mat,
+  target_depth = NULL,
+  return_log = FALSE,
+  rm_less = TRUE
+)
 }
 \arguments{
 \item{in_mat}{An input matrix}
 
-\item{target_depth}{This can either be nothing or a}
+\item{target_depth}{This can either be nothing or a lower cutoff}
+
+\item{rm_less}{Will remove cells less than the cutoff rather than throwing an error.}
+
+\item{return_log}{If we should log2(n+1) transform after normalizing}
 }
 \value{
+A matrix of the normalized matrix
+
 A matrix of the downsampled in_mat
 }
 \description{
@@ -24,8 +45,12 @@ the target depth, or if not, it will be automatically set to the minimum of
 the colSums, or if you are doing an integration & want to downsample 
 different datasets, you should first FILTER OUT the columns whose colSums 
 are less than the cutoff, then set this value to the cutoff.
+
+This function takes in a matrix of counts & will
 }
 \examples{
    in_mat<-matrix(rnbinom(1000*20000,.1,c(0.5,0.5,0.5)),ncol=1000,nrow=20000)
    out_mat<-downsample_mat(in_mat)
+   in_mat<-matrix(rnbinom(1000*20000,.1,c(0.5,0.5,0.5)),ncol=1000,nrow=20000)
+   out_mat<-min_count_norm_mat(in_mat)
 }
